@@ -1,0 +1,33 @@
+﻿@model List<TimeZoneInfo>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @ViewBag.HawaiianStandardTime
+</div>
+<br />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<div class="text-center">
+    @ViewBag.localTimeZone
+</div>
+<br />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+
+<div class="text-center">
+   @foreach (var item in Model)
+    {
+        <p>@Json.Serialize( item)</p>
+        <hr />
+    }
+</div>
